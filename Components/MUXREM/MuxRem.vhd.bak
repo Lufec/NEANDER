@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity MuxRem is
+	port ( selRem: in std_logic_vector(1 downto 0);
+			 inRem1,inRem2,inRem3: in std_logic_vector(7 downto 0);
+			 outRem: out std_logic_vector(7 downto 0);
+			);
+end MuxRem;
+
+architecture behaviour of MuxRem is
+
+	outRem<= inRem1 when selRem = "00" elsif  inRem2 when selRem = "01" else inRem3;
+
+
+end behaviour;
