@@ -1,0 +1,463 @@
+Simulator report for Controller
+Sat Jun 15 17:00:02 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 274 nodes    ;
+; Simulation Coverage         ;      87.23 % ;
+; Total Number of Transitions ; 2291         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                             ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                 ;               ;
+; Vector input source                                                                        ; C:/Users/lu_fe/Downloads/NEANDER2/Components/CONTROLER/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                  ; On            ;
+; Check outputs                                                                              ; Off                                                                 ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                 ; Off           ;
+; Detect glitches                                                                            ; Off                                                                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      87.23 % ;
+; Total nodes checked                                 ; 274          ;
+; Total output ports checked                          ; 274          ;
+; Total output ports with complete 1/0-value coverage ; 239          ;
+; Total output ports with no 1/0-value coverage       ; 27           ;
+; Total output ports with no 1-value coverage         ; 30           ;
+; Total output ports with no 0-value coverage         ; 32           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                              ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Controller|process_1~0           ; |Controller|process_1~0           ; out0             ;
+; |Controller|process_1~1           ; |Controller|process_1~1           ; out0             ;
+; |Controller|process_1~2           ; |Controller|process_1~2           ; out0             ;
+; |Controller|process_1~3           ; |Controller|process_1~3           ; out0             ;
+; |Controller|reg_fstate~0          ; |Controller|reg_fstate~0          ; out              ;
+; |Controller|reg_fstate~1          ; |Controller|reg_fstate~1          ; out              ;
+; |Controller|reg_fstate~2          ; |Controller|reg_fstate~2          ; out              ;
+; |Controller|reg_fstate~3          ; |Controller|reg_fstate~3          ; out              ;
+; |Controller|reg_fstate~4          ; |Controller|reg_fstate~4          ; out              ;
+; |Controller|reg_fstate~5          ; |Controller|reg_fstate~5          ; out              ;
+; |Controller|reg_fstate~6          ; |Controller|reg_fstate~6          ; out              ;
+; |Controller|reg_fstate~7          ; |Controller|reg_fstate~7          ; out              ;
+; |Controller|reg_fstate~9          ; |Controller|reg_fstate~9          ; out              ;
+; |Controller|reg_fstate~10         ; |Controller|reg_fstate~10         ; out              ;
+; |Controller|reg_fstate~11         ; |Controller|reg_fstate~11         ; out              ;
+; |Controller|reg_fstate~12         ; |Controller|reg_fstate~12         ; out              ;
+; |Controller|reg_fstate~14         ; |Controller|reg_fstate~14         ; out              ;
+; |Controller|reg_fstate~15         ; |Controller|reg_fstate~15         ; out              ;
+; |Controller|reg_fstate~16         ; |Controller|reg_fstate~16         ; out              ;
+; |Controller|reg_fstate~17         ; |Controller|reg_fstate~17         ; out              ;
+; |Controller|reg_fstate~18         ; |Controller|reg_fstate~18         ; out              ;
+; |Controller|reg_fstate~20         ; |Controller|reg_fstate~20         ; out              ;
+; |Controller|reg_fstate~21         ; |Controller|reg_fstate~21         ; out              ;
+; |Controller|reg_fstate~22         ; |Controller|reg_fstate~22         ; out              ;
+; |Controller|reg_fstate~23         ; |Controller|reg_fstate~23         ; out              ;
+; |Controller|reg_fstate~24         ; |Controller|reg_fstate~24         ; out              ;
+; |Controller|reg_fstate~25         ; |Controller|reg_fstate~25         ; out              ;
+; |Controller|reg_fstate~26         ; |Controller|reg_fstate~26         ; out              ;
+; |Controller|reg_fstate~27         ; |Controller|reg_fstate~27         ; out              ;
+; |Controller|reg_fstate~28         ; |Controller|reg_fstate~28         ; out              ;
+; |Controller|reg_fstate~29         ; |Controller|reg_fstate~29         ; out              ;
+; |Controller|reg_fstate~30         ; |Controller|reg_fstate~30         ; out              ;
+; |Controller|fstate.Search2        ; |Controller|fstate.Search2        ; regout           ;
+; |Controller|WideOr1               ; |Controller|WideOr1               ; out0             ;
+; |Controller|fstate.Search1        ; |Controller|fstate.Search1        ; regout           ;
+; |Controller|reg_fstate~31         ; |Controller|reg_fstate~31         ; out              ;
+; |Controller|fstate.Search3        ; |Controller|fstate.Search3        ; regout           ;
+; |Controller|reg_fstate~32         ; |Controller|reg_fstate~32         ; out              ;
+; |Controller|fstate.Check          ; |Controller|fstate.Check          ; regout           ;
+; |Controller|reg_fstate~33         ; |Controller|reg_fstate~33         ; out              ;
+; |Controller|fstate.NOP            ; |Controller|fstate.NOP            ; regout           ;
+; |Controller|fstate.NOT1           ; |Controller|fstate.NOT1           ; regout           ;
+; |Controller|fstate.PREP2          ; |Controller|fstate.PREP2          ; regout           ;
+; |Controller|reg_fstate~34         ; |Controller|reg_fstate~34         ; out              ;
+; |Controller|fstate.PREP3          ; |Controller|fstate.PREP3          ; regout           ;
+; |Controller|reg_fstate~35         ; |Controller|reg_fstate~35         ; out              ;
+; |Controller|fstate.PREP1          ; |Controller|fstate.PREP1          ; regout           ;
+; |Controller|fstate.STA1           ; |Controller|fstate.STA1           ; regout           ;
+; |Controller|reg_fstate~36         ; |Controller|reg_fstate~36         ; out              ;
+; |Controller|fstate.STA2           ; |Controller|fstate.STA2           ; regout           ;
+; |Controller|reg_fstate~37         ; |Controller|reg_fstate~37         ; out              ;
+; |Controller|fstate.PREP4          ; |Controller|fstate.PREP4          ; regout           ;
+; |Controller|fstate.LDA            ; |Controller|fstate.LDA            ; regout           ;
+; |Controller|fstate.AND1           ; |Controller|fstate.AND1           ; regout           ;
+; |Controller|reg_fstate~40         ; |Controller|reg_fstate~40         ; out0             ;
+; |Controller|WideOr15              ; |Controller|WideOr15              ; out0             ;
+; |Controller|fstate.JnNZ           ; |Controller|fstate.JnNZ           ; regout           ;
+; |Controller|WideOr16              ; |Controller|WideOr16              ; out0             ;
+; |Controller|fstate.JZ             ; |Controller|fstate.JZ             ; regout           ;
+; |Controller|WideOr17              ; |Controller|WideOr17              ; out0             ;
+; |Controller|fstate.JMP3           ; |Controller|fstate.JMP3           ; regout           ;
+; |Controller|WideOr18              ; |Controller|WideOr18              ; out0             ;
+; |Controller|fstate.JMP2           ; |Controller|fstate.JMP2           ; regout           ;
+; |Controller|fstate.JMP1           ; |Controller|fstate.JMP1           ; regout           ;
+; |Controller|WideOr19              ; |Controller|WideOr19              ; out0             ;
+; |Controller|WideOr20              ; |Controller|WideOr20              ; out0             ;
+; |Controller|fstate.SetAdress1     ; |Controller|fstate.SetAdress1     ; regout           ;
+; |Controller|fstate.SetData        ; |Controller|fstate.SetData        ; regout           ;
+; |Controller|WideOr21              ; |Controller|WideOr21              ; out0             ;
+; |Controller|fstate.Decision       ; |Controller|fstate.Decision       ; regout           ;
+; |Controller|selUAL~0              ; |Controller|selUAL~0              ; out0             ;
+; |Controller|fstate.Wait1          ; |Controller|fstate.Wait1          ; regout           ;
+; |Controller|selUAL~1              ; |Controller|selUAL~1              ; out0             ;
+; |Controller|fstate.LoadAC         ; |Controller|fstate.LoadAC         ; regout           ;
+; |Controller|selUAL~2              ; |Controller|selUAL~2              ; out0             ;
+; |Controller|WideOr22              ; |Controller|WideOr22              ; out0             ;
+; |Controller|fstate.DISP1          ; |Controller|fstate.DISP1          ; regout           ;
+; |Controller|writeOn~0             ; |Controller|writeOn~0             ; out0             ;
+; |Controller|WideOr23              ; |Controller|WideOr23              ; out0             ;
+; |Controller|reg_fstate.Search2    ; |Controller|reg_fstate.Search2    ; out              ;
+; |Controller|reg_fstate.Search1    ; |Controller|reg_fstate.Search1    ; out              ;
+; |Controller|reg_fstate.Search3    ; |Controller|reg_fstate.Search3    ; out              ;
+; |Controller|reg_fstate.Check      ; |Controller|reg_fstate.Check      ; out              ;
+; |Controller|reg_fstate.NOP        ; |Controller|reg_fstate.NOP        ; out              ;
+; |Controller|reg_fstate.NOT1       ; |Controller|reg_fstate.NOT1       ; out              ;
+; |Controller|reg_fstate.PREP2      ; |Controller|reg_fstate.PREP2      ; out              ;
+; |Controller|reg_fstate.PREP3      ; |Controller|reg_fstate.PREP3      ; out              ;
+; |Controller|reg_fstate.PREP1      ; |Controller|reg_fstate.PREP1      ; out              ;
+; |Controller|reg_fstate.STA1       ; |Controller|reg_fstate.STA1       ; out              ;
+; |Controller|reg_fstate.STA2       ; |Controller|reg_fstate.STA2       ; out              ;
+; |Controller|reg_fstate.PREP4      ; |Controller|reg_fstate.PREP4      ; out              ;
+; |Controller|reg_fstate.LDA        ; |Controller|reg_fstate.LDA        ; out              ;
+; |Controller|reg_fstate.AND1       ; |Controller|reg_fstate.AND1       ; out              ;
+; |Controller|reg_fstate.JnNZ       ; |Controller|reg_fstate.JnNZ       ; out              ;
+; |Controller|reg_fstate.JZ         ; |Controller|reg_fstate.JZ         ; out              ;
+; |Controller|reg_fstate.JMP3       ; |Controller|reg_fstate.JMP3       ; out              ;
+; |Controller|reg_fstate.JMP2       ; |Controller|reg_fstate.JMP2       ; out              ;
+; |Controller|reg_fstate.JMP1       ; |Controller|reg_fstate.JMP1       ; out              ;
+; |Controller|reg_fstate.SetAdress1 ; |Controller|reg_fstate.SetAdress1 ; out              ;
+; |Controller|reg_fstate.SetData    ; |Controller|reg_fstate.SetData    ; out              ;
+; |Controller|reg_fstate.Decision   ; |Controller|reg_fstate.Decision   ; out              ;
+; |Controller|reg_fstate.Wait1      ; |Controller|reg_fstate.Wait1      ; out              ;
+; |Controller|reg_fstate.LoadAC     ; |Controller|reg_fstate.LoadAC     ; out              ;
+; |Controller|reg_fstate.DISP1      ; |Controller|reg_fstate.DISP1      ; out              ;
+; |Controller|load_AC~0             ; |Controller|load_AC~0             ; out              ;
+; |Controller|load_PC~0             ; |Controller|load_PC~0             ; out              ;
+; |Controller|load_REM~0            ; |Controller|load_REM~0            ; out              ;
+; |Controller|load_RDM~0            ; |Controller|load_RDM~0            ; out              ;
+; |Controller|load_RI~0             ; |Controller|load_RI~0             ; out              ;
+; |Controller|load_NZ~0             ; |Controller|load_NZ~0             ; out              ;
+; |Controller|selREM~0              ; |Controller|selREM~0              ; out              ;
+; |Controller|selRDM~0              ; |Controller|selRDM~0              ; out              ;
+; |Controller|selRDM~1              ; |Controller|selRDM~1              ; out              ;
+; |Controller|selUAL~3              ; |Controller|selUAL~3              ; out              ;
+; |Controller|selUAL~4              ; |Controller|selUAL~4              ; out              ;
+; |Controller|selUAL~5              ; |Controller|selUAL~5              ; out              ;
+; |Controller|sumPC~0               ; |Controller|sumPC~0               ; out              ;
+; |Controller|writeOn~1             ; |Controller|writeOn~1             ; out              ;
+; |Controller|readOn~0              ; |Controller|readOn~0              ; out              ;
+; |Controller|turnDspOn~0           ; |Controller|turnDspOn~0           ; out              ;
+; |Controller|clock                 ; |Controller|clock                 ; out              ;
+; |Controller|go                    ; |Controller|go                    ; out              ;
+; |Controller|NZ[0]                 ; |Controller|NZ[0]                 ; out              ;
+; |Controller|NZ[1]                 ; |Controller|NZ[1]                 ; out              ;
+; |Controller|code[0]               ; |Controller|code[0]               ; out              ;
+; |Controller|code[1]               ; |Controller|code[1]               ; out              ;
+; |Controller|code[2]               ; |Controller|code[2]               ; out              ;
+; |Controller|code[3]               ; |Controller|code[3]               ; out              ;
+; |Controller|choice[0]             ; |Controller|choice[0]             ; out              ;
+; |Controller|choice[1]             ; |Controller|choice[1]             ; out              ;
+; |Controller|load_AC               ; |Controller|load_AC               ; pin_out          ;
+; |Controller|load_PC               ; |Controller|load_PC               ; pin_out          ;
+; |Controller|load_REM              ; |Controller|load_REM              ; pin_out          ;
+; |Controller|load_RDM              ; |Controller|load_RDM              ; pin_out          ;
+; |Controller|load_RI               ; |Controller|load_RI               ; pin_out          ;
+; |Controller|load_NZ               ; |Controller|load_NZ               ; pin_out          ;
+; |Controller|selREM                ; |Controller|selREM                ; pin_out          ;
+; |Controller|selRDM[0]             ; |Controller|selRDM[0]             ; pin_out          ;
+; |Controller|selRDM[1]             ; |Controller|selRDM[1]             ; pin_out          ;
+; |Controller|selUAL[0]             ; |Controller|selUAL[0]             ; pin_out          ;
+; |Controller|selUAL[1]             ; |Controller|selUAL[1]             ; pin_out          ;
+; |Controller|selUAL[2]             ; |Controller|selUAL[2]             ; pin_out          ;
+; |Controller|sumPC                 ; |Controller|sumPC                 ; pin_out          ;
+; |Controller|writeOn               ; |Controller|writeOn               ; pin_out          ;
+; |Controller|readOn                ; |Controller|readOn                ; pin_out          ;
+; |Controller|turnDspOn             ; |Controller|turnDspOn             ; pin_out          ;
+; |Controller|fstate~0              ; |Controller|fstate~0              ; out0             ;
+; |Controller|fstate.Search1~0      ; |Controller|fstate.Search1~0      ; out0             ;
+; |Controller|WideOr0~1             ; |Controller|WideOr0~1             ; out0             ;
+; |Controller|fstate.Search3~0      ; |Controller|fstate.Search3~0      ; out0             ;
+; |Controller|WideOr0~2             ; |Controller|WideOr0~2             ; out0             ;
+; |Controller|fstate.Check~0        ; |Controller|fstate.Check~0        ; out0             ;
+; |Controller|WideOr0~3             ; |Controller|WideOr0~3             ; out0             ;
+; |Controller|fstate.NOP~0          ; |Controller|fstate.NOP~0          ; out0             ;
+; |Controller|WideOr1~0             ; |Controller|WideOr1~0             ; out0             ;
+; |Controller|fstate.NOT1~0         ; |Controller|fstate.NOT1~0         ; out0             ;
+; |Controller|WideOr1~1             ; |Controller|WideOr1~1             ; out0             ;
+; |Controller|fstate.PREP2~0        ; |Controller|fstate.PREP2~0        ; out0             ;
+; |Controller|WideOr0~4             ; |Controller|WideOr0~4             ; out0             ;
+; |Controller|fstate.PREP3~0        ; |Controller|fstate.PREP3~0        ; out0             ;
+; |Controller|WideOr0~5             ; |Controller|WideOr0~5             ; out0             ;
+; |Controller|fstate.PREP1~0        ; |Controller|fstate.PREP1~0        ; out0             ;
+; |Controller|WideOr0~6             ; |Controller|WideOr0~6             ; out0             ;
+; |Controller|fstate.STA1~0         ; |Controller|fstate.STA1~0         ; out0             ;
+; |Controller|WideOr0~7             ; |Controller|WideOr0~7             ; out0             ;
+; |Controller|fstate.STA2~0         ; |Controller|fstate.STA2~0         ; out0             ;
+; |Controller|WideOr1~2             ; |Controller|WideOr1~2             ; out0             ;
+; |Controller|fstate.PREP4~0        ; |Controller|fstate.PREP4~0        ; out0             ;
+; |Controller|WideOr0~8             ; |Controller|WideOr0~8             ; out0             ;
+; |Controller|fstate.LDA~0          ; |Controller|fstate.LDA~0          ; out0             ;
+; |Controller|WideOr1~3             ; |Controller|WideOr1~3             ; out0             ;
+; |Controller|fstate.AND1~0         ; |Controller|fstate.AND1~0         ; out0             ;
+; |Controller|WideOr1~4             ; |Controller|WideOr1~4             ; out0             ;
+; |Controller|fstate.JnNZ~0         ; |Controller|fstate.JnNZ~0         ; out0             ;
+; |Controller|WideOr1~7             ; |Controller|WideOr1~7             ; out0             ;
+; |Controller|fstate.JZ~0           ; |Controller|fstate.JZ~0           ; out0             ;
+; |Controller|WideOr0~10            ; |Controller|WideOr0~10            ; out0             ;
+; |Controller|fstate.JMP3~0         ; |Controller|fstate.JMP3~0         ; out0             ;
+; |Controller|WideOr1~8             ; |Controller|WideOr1~8             ; out0             ;
+; |Controller|fstate.JMP2~0         ; |Controller|fstate.JMP2~0         ; out0             ;
+; |Controller|WideOr0~11            ; |Controller|WideOr0~11            ; out0             ;
+; |Controller|fstate.JMP1~0         ; |Controller|fstate.JMP1~0         ; out0             ;
+; |Controller|WideOr0~12            ; |Controller|WideOr0~12            ; out0             ;
+; |Controller|fstate.SetAdress1~0   ; |Controller|fstate.SetAdress1~0   ; out0             ;
+; |Controller|WideOr0~14            ; |Controller|WideOr0~14            ; out0             ;
+; |Controller|fstate.SetData~0      ; |Controller|fstate.SetData~0      ; out0             ;
+; |Controller|WideOr0~15            ; |Controller|WideOr0~15            ; out0             ;
+; |Controller|fstate.Decision~0     ; |Controller|fstate.Decision~0     ; out0             ;
+; |Controller|WideOr0~16            ; |Controller|WideOr0~16            ; out0             ;
+; |Controller|fstate.Wait1~0        ; |Controller|fstate.Wait1~0        ; out0             ;
+; |Controller|Selector0~0           ; |Controller|Selector0~0           ; out0             ;
+; |Controller|fstate.LoadAC~0       ; |Controller|fstate.LoadAC~0       ; out0             ;
+; |Controller|WideOr0~17            ; |Controller|WideOr0~17            ; out0             ;
+; |Controller|fstate.Search2~0      ; |Controller|fstate.Search2~0      ; out0             ;
+; |Controller|WideOr0~18            ; |Controller|WideOr0~18            ; out0             ;
+; |Controller|fstate.DISP1~0        ; |Controller|fstate.DISP1~0        ; out0             ;
+; |Controller|WideOr0~19            ; |Controller|WideOr0~19            ; out0             ;
+; |Controller|fstate~4              ; |Controller|fstate~4              ; out0             ;
+; |Controller|Selector0~1           ; |Controller|Selector0~1           ; out0             ;
+; |Controller|Selector0~2           ; |Controller|Selector0~2           ; out0             ;
+; |Controller|Selector1~0           ; |Controller|Selector1~0           ; out0             ;
+; |Controller|Selector1~1           ; |Controller|Selector1~1           ; out0             ;
+; |Controller|Selector2~0           ; |Controller|Selector2~0           ; out0             ;
+; |Controller|Selector2~2           ; |Controller|Selector2~2           ; out0             ;
+; |Controller|Selector3~1           ; |Controller|Selector3~1           ; out0             ;
+; |Controller|Selector4~0           ; |Controller|Selector4~0           ; out0             ;
+; |Controller|Selector4~2           ; |Controller|Selector4~2           ; out0             ;
+; |Controller|Selector5~0           ; |Controller|Selector5~0           ; out0             ;
+; |Controller|Selector6~0           ; |Controller|Selector6~0           ; out0             ;
+; |Controller|Selector6~3           ; |Controller|Selector6~3           ; out0             ;
+; |Controller|Selector8~0           ; |Controller|Selector8~0           ; out0             ;
+; |Controller|Selector8~1           ; |Controller|Selector8~1           ; out0             ;
+; |Controller|Selector8~2           ; |Controller|Selector8~2           ; out0             ;
+; |Controller|Selector9~0           ; |Controller|Selector9~0           ; out0             ;
+; |Controller|Selector9~1           ; |Controller|Selector9~1           ; out0             ;
+; |Controller|Selector9~2           ; |Controller|Selector9~2           ; out0             ;
+; |Controller|Selector10~0          ; |Controller|Selector10~0          ; out0             ;
+; |Controller|Selector10~1          ; |Controller|Selector10~1          ; out0             ;
+; |Controller|Selector10~2          ; |Controller|Selector10~2          ; out0             ;
+; |Controller|Selector11~0          ; |Controller|Selector11~0          ; out0             ;
+; |Controller|Selector11~1          ; |Controller|Selector11~1          ; out0             ;
+; |Controller|Selector11~2          ; |Controller|Selector11~2          ; out0             ;
+; |Controller|Selector12~0          ; |Controller|Selector12~0          ; out0             ;
+; |Controller|Selector12~2          ; |Controller|Selector12~2          ; out0             ;
+; |Controller|Selector13~0          ; |Controller|Selector13~0          ; out0             ;
+; |Controller|Selector13~1          ; |Controller|Selector13~1          ; out0             ;
+; |Controller|Selector13~2          ; |Controller|Selector13~2          ; out0             ;
+; |Controller|Equal0~0              ; |Controller|Equal0~0              ; out0             ;
+; |Controller|Equal1~0              ; |Controller|Equal1~0              ; out0             ;
+; |Controller|Equal2~0              ; |Controller|Equal2~0              ; out0             ;
+; |Controller|Equal3~0              ; |Controller|Equal3~0              ; out0             ;
+; |Controller|Equal4~0              ; |Controller|Equal4~0              ; out0             ;
+; |Controller|Equal5~0              ; |Controller|Equal5~0              ; out0             ;
+; |Controller|Equal6~0              ; |Controller|Equal6~0              ; out0             ;
+; |Controller|Equal8~0              ; |Controller|Equal8~0              ; out0             ;
+; |Controller|Equal9~0              ; |Controller|Equal9~0              ; out0             ;
+; |Controller|Equal10~0             ; |Controller|Equal10~0             ; out0             ;
+; |Controller|Equal11~0             ; |Controller|Equal11~0             ; out0             ;
+; |Controller|Equal12~0             ; |Controller|Equal12~0             ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |Controller|reg_fstate~8     ; |Controller|reg_fstate~8     ; out              ;
+; |Controller|reg_fstate~13    ; |Controller|reg_fstate~13    ; out              ;
+; |Controller|reg_fstate~19    ; |Controller|reg_fstate~19    ; out              ;
+; |Controller|reg_fstate~38    ; |Controller|reg_fstate~38    ; out              ;
+; |Controller|reg_fstate~39    ; |Controller|reg_fstate~39    ; out              ;
+; |Controller|fstate.OR1       ; |Controller|fstate.OR1       ; regout           ;
+; |Controller|fstate.ADD       ; |Controller|fstate.ADD       ; regout           ;
+; |Controller|reg_fstate~41    ; |Controller|reg_fstate~41    ; out              ;
+; |Controller|fstate.JN        ; |Controller|fstate.JN        ; regout           ;
+; |Controller|fstate.Start     ; |Controller|fstate.Start     ; regout           ;
+; |Controller|reg_fstate.OR1   ; |Controller|reg_fstate.OR1   ; out              ;
+; |Controller|reg_fstate.ADD   ; |Controller|reg_fstate.ADD   ; out              ;
+; |Controller|reg_fstate.JN    ; |Controller|reg_fstate.JN    ; out              ;
+; |Controller|reg_fstate.Start ; |Controller|reg_fstate.Start ; out              ;
+; |Controller|reset            ; |Controller|reset            ; out              ;
+; |Controller|fstate.Start~0   ; |Controller|fstate.Start~0   ; out0             ;
+; |Controller|WideOr0~0        ; |Controller|WideOr0~0        ; out0             ;
+; |Controller|fstate.OR1~0     ; |Controller|fstate.OR1~0     ; out0             ;
+; |Controller|WideOr1~5        ; |Controller|WideOr1~5        ; out0             ;
+; |Controller|fstate.ADD~0     ; |Controller|fstate.ADD~0     ; out0             ;
+; |Controller|WideOr1~6        ; |Controller|WideOr1~6        ; out0             ;
+; |Controller|fstate.JN~0      ; |Controller|fstate.JN~0      ; out0             ;
+; |Controller|WideOr0~13       ; |Controller|WideOr0~13       ; out0             ;
+; |Controller|Selector2~1      ; |Controller|Selector2~1      ; out0             ;
+; |Controller|Selector4~1      ; |Controller|Selector4~1      ; out0             ;
+; |Controller|Selector6~1      ; |Controller|Selector6~1      ; out0             ;
+; |Controller|Selector6~2      ; |Controller|Selector6~2      ; out0             ;
+; |Controller|Selector7~0      ; |Controller|Selector7~0      ; out0             ;
+; |Controller|Selector12~1     ; |Controller|Selector12~1     ; out0             ;
+; |Controller|Equal7~0         ; |Controller|Equal7~0         ; out0             ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |Controller|reg_fstate~8     ; |Controller|reg_fstate~8     ; out              ;
+; |Controller|reg_fstate~13    ; |Controller|reg_fstate~13    ; out              ;
+; |Controller|reg_fstate~19    ; |Controller|reg_fstate~19    ; out              ;
+; |Controller|reg_fstate~38    ; |Controller|reg_fstate~38    ; out              ;
+; |Controller|reg_fstate~39    ; |Controller|reg_fstate~39    ; out              ;
+; |Controller|fstate.OR1       ; |Controller|fstate.OR1       ; regout           ;
+; |Controller|fstate.ADD       ; |Controller|fstate.ADD       ; regout           ;
+; |Controller|reg_fstate~41    ; |Controller|reg_fstate~41    ; out              ;
+; |Controller|fstate.HLT       ; |Controller|fstate.HLT       ; regout           ;
+; |Controller|fstate.JN        ; |Controller|fstate.JN        ; regout           ;
+; |Controller|reg_fstate.OR1   ; |Controller|reg_fstate.OR1   ; out              ;
+; |Controller|reg_fstate.ADD   ; |Controller|reg_fstate.ADD   ; out              ;
+; |Controller|reg_fstate.HLT   ; |Controller|reg_fstate.HLT   ; out              ;
+; |Controller|reg_fstate.JN    ; |Controller|reg_fstate.JN    ; out              ;
+; |Controller|reg_fstate.Start ; |Controller|reg_fstate.Start ; out              ;
+; |Controller|reset            ; |Controller|reset            ; out              ;
+; |Controller|fstate.Start~0   ; |Controller|fstate.Start~0   ; out0             ;
+; |Controller|fstate.OR1~0     ; |Controller|fstate.OR1~0     ; out0             ;
+; |Controller|WideOr1~5        ; |Controller|WideOr1~5        ; out0             ;
+; |Controller|fstate.ADD~0     ; |Controller|fstate.ADD~0     ; out0             ;
+; |Controller|WideOr1~6        ; |Controller|WideOr1~6        ; out0             ;
+; |Controller|fstate.HLT~0     ; |Controller|fstate.HLT~0     ; out0             ;
+; |Controller|WideOr0~9        ; |Controller|WideOr0~9        ; out0             ;
+; |Controller|fstate.JN~0      ; |Controller|fstate.JN~0      ; out0             ;
+; |Controller|WideOr0~13       ; |Controller|WideOr0~13       ; out0             ;
+; |Controller|Selector2~1      ; |Controller|Selector2~1      ; out0             ;
+; |Controller|Selector3~0      ; |Controller|Selector3~0      ; out0             ;
+; |Controller|Selector4~1      ; |Controller|Selector4~1      ; out0             ;
+; |Controller|Selector6~1      ; |Controller|Selector6~1      ; out0             ;
+; |Controller|Selector6~2      ; |Controller|Selector6~2      ; out0             ;
+; |Controller|Selector7~0      ; |Controller|Selector7~0      ; out0             ;
+; |Controller|Equal7~0         ; |Controller|Equal7~0         ; out0             ;
++------------------------------+------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jun 15 17:00:02 2019
+Info: Command: quartus_sim --simulation_results_format=VWF Controller -c Controller
+Info (324025): Using vector source file "C:/Users/lu_fe/Downloads/NEANDER2/Components/CONTROLER/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      87.23 %
+Info (328052): Number of transitions in simulation is 2291
+Info (324045): Vector file Controller.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4463 megabytes
+    Info: Processing ended: Sat Jun 15 17:00:02 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
