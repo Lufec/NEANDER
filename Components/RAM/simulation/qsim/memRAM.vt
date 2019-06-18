@@ -1,0 +1,614 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/15/2019 01:46:35"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    memRAM
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module memRAM_vlg_sample_tst(
+	clk,
+	ent,
+	key,
+	R,
+	reset,
+	W,
+	sampler_tx
+);
+input  clk;
+input [7:0] ent;
+input [7:0] key;
+input  R;
+input  reset;
+input  W;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or ent or key or R or reset or W)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module memRAM_vlg_check_tst (
+	saida,
+	sampler_rx
+);
+input [7:0] saida;
+input sampler_rx;
+
+reg [7:0] saida_expected;
+
+reg [7:0] saida_prev;
+
+reg [7:0] saida_expected_prev;
+
+reg [7:0] last_saida_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:1] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 1'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	saida_prev = saida;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	saida_expected_prev = saida_expected;
+end
+
+
+// expected saida[ 7 ]
+initial
+begin
+	saida_expected[7] = 1'bX;
+end 
+// expected saida[ 6 ]
+initial
+begin
+	saida_expected[6] = 1'bX;
+end 
+// expected saida[ 5 ]
+initial
+begin
+	saida_expected[5] = 1'bX;
+end 
+// expected saida[ 4 ]
+initial
+begin
+	saida_expected[4] = 1'bX;
+end 
+// expected saida[ 3 ]
+initial
+begin
+	saida_expected[3] = 1'bX;
+end 
+// expected saida[ 2 ]
+initial
+begin
+	saida_expected[2] = 1'bX;
+end 
+// expected saida[ 1 ]
+initial
+begin
+	saida_expected[1] = 1'bX;
+end 
+// expected saida[ 0 ]
+initial
+begin
+	saida_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(saida_expected or saida)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected saida = %b | ",saida_expected_prev);
+	$display("| real saida = %b | ",saida_prev);
+`endif
+	if (
+		( saida_expected_prev[0] !== 1'bx ) && ( saida_prev[0] !== saida_expected_prev[0] )
+		&& ((saida_expected_prev[0] !== last_saida_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port saida[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", saida_expected_prev);
+		$display ("     Real value = %b", saida_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_saida_exp[0] = saida_expected_prev[0];
+	end
+	if (
+		( saida_expected_prev[1] !== 1'bx ) && ( saida_prev[1] !== saida_expected_prev[1] )
+		&& ((saida_expected_prev[1] !== last_saida_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port saida[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", saida_expected_prev);
+		$display ("     Real value = %b", saida_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_saida_exp[1] = saida_expected_prev[1];
+	end
+	if (
+		( saida_expected_prev[2] !== 1'bx ) && ( saida_prev[2] !== saida_expected_prev[2] )
+		&& ((saida_expected_prev[2] !== last_saida_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port saida[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", saida_expected_prev);
+		$display ("     Real value = %b", saida_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_saida_exp[2] = saida_expected_prev[2];
+	end
+	if (
+		( saida_expected_prev[3] !== 1'bx ) && ( saida_prev[3] !== saida_expected_prev[3] )
+		&& ((saida_expected_prev[3] !== last_saida_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port saida[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", saida_expected_prev);
+		$display ("     Real value = %b", saida_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_saida_exp[3] = saida_expected_prev[3];
+	end
+	if (
+		( saida_expected_prev[4] !== 1'bx ) && ( saida_prev[4] !== saida_expected_prev[4] )
+		&& ((saida_expected_prev[4] !== last_saida_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port saida[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", saida_expected_prev);
+		$display ("     Real value = %b", saida_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_saida_exp[4] = saida_expected_prev[4];
+	end
+	if (
+		( saida_expected_prev[5] !== 1'bx ) && ( saida_prev[5] !== saida_expected_prev[5] )
+		&& ((saida_expected_prev[5] !== last_saida_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port saida[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", saida_expected_prev);
+		$display ("     Real value = %b", saida_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_saida_exp[5] = saida_expected_prev[5];
+	end
+	if (
+		( saida_expected_prev[6] !== 1'bx ) && ( saida_prev[6] !== saida_expected_prev[6] )
+		&& ((saida_expected_prev[6] !== last_saida_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port saida[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", saida_expected_prev);
+		$display ("     Real value = %b", saida_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_saida_exp[6] = saida_expected_prev[6];
+	end
+	if (
+		( saida_expected_prev[7] !== 1'bx ) && ( saida_prev[7] !== saida_expected_prev[7] )
+		&& ((saida_expected_prev[7] !== last_saida_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port saida[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", saida_expected_prev);
+		$display ("     Real value = %b", saida_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_saida_exp[7] = saida_expected_prev[7];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module memRAM_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg [7:0] ent;
+reg [7:0] key;
+reg R;
+reg reset;
+reg W;
+// wires                                               
+wire [7:0] saida;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+memRAM i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.ent(ent),
+	.key(key),
+	.R(R),
+	.reset(reset),
+	.saida(saida),
+	.W(W)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+// key[ 7 ]
+initial
+begin
+	key[7] = 1'b0;
+end 
+// key[ 6 ]
+initial
+begin
+	key[6] = 1'b0;
+end 
+// key[ 5 ]
+initial
+begin
+	key[5] = 1'b0;
+end 
+// key[ 4 ]
+initial
+begin
+	key[4] = 1'b0;
+end 
+// key[ 3 ]
+initial
+begin
+	key[3] = 1'b0;
+	key[3] = #400000 1'b1;
+	key[3] = #400000 1'b0;
+end 
+// key[ 2 ]
+initial
+begin
+	repeat(2)
+	begin
+		key[2] = 1'b0;
+		key[2] = #200000 1'b1;
+		# 200000;
+	end
+	key[2] = 1'b0;
+	key[2] = #120000 1'b1;
+end 
+// key[ 1 ]
+initial
+begin
+	repeat(4)
+	begin
+		key[1] = 1'b0;
+		key[1] = #100000 1'b1;
+		# 100000;
+	end
+	key[1] = 1'b0;
+	key[1] = #60000 1'b1;
+	key[1] = #60000 1'b0;
+	key[1] = #60000 1'b1;
+end 
+// key[ 0 ]
+initial
+begin
+	repeat(8)
+	begin
+		key[0] = 1'b0;
+		key[0] = #50000 1'b1;
+		# 50000;
+	end
+	repeat(3)
+	begin
+		key[0] = 1'b0;
+		key[0] = #30000 1'b1;
+		# 30000;
+	end
+	key[0] = 1'b0;
+end 
+// ent[ 7 ]
+initial
+begin
+	ent[7] = 1'b1;
+	ent[7] = #30000 1'b0;
+	ent[7] = #30000 1'b1;
+	ent[7] = #180000 1'b0;
+	ent[7] = #30000 1'b1;
+	ent[7] = #90000 1'b0;
+	ent[7] = #60000 1'b1;
+	ent[7] = #210000 1'b0;
+	ent[7] = #30000 1'b1;
+	ent[7] = #30000 1'b0;
+	ent[7] = #60000 1'b1;
+	ent[7] = #90000 1'b0;
+	ent[7] = #90000 1'b1;
+	ent[7] = #30000 1'b0;
+	ent[7] = #30000 1'b1;
+end 
+// ent[ 6 ]
+initial
+begin
+	ent[6] = 1'b0;
+	ent[6] = #90000 1'b1;
+	ent[6] = #30000 1'b0;
+	ent[6] = #30000 1'b1;
+	ent[6] = #210000 1'b0;
+	ent[6] = #60000 1'b1;
+	ent[6] = #60000 1'b0;
+	ent[6] = #30000 1'b1;
+	ent[6] = #30000 1'b0;
+	ent[6] = #30000 1'b1;
+	ent[6] = #60000 1'b0;
+	ent[6] = #60000 1'b1;
+	ent[6] = #60000 1'b0;
+	ent[6] = #30000 1'b1;
+	ent[6] = #60000 1'b0;
+	ent[6] = #30000 1'b1;
+	ent[6] = #90000 1'b0;
+end 
+// ent[ 5 ]
+initial
+begin
+	ent[5] = 1'b1;
+	ent[5] = #30000 1'b0;
+	ent[5] = #90000 1'b1;
+	ent[5] = #60000 1'b0;
+	ent[5] = #30000 1'b1;
+	ent[5] = #90000 1'b0;
+	ent[5] = #90000 1'b1;
+	ent[5] = #60000 1'b0;
+	ent[5] = #30000 1'b1;
+	ent[5] = #120000 1'b0;
+	ent[5] = #60000 1'b1;
+	ent[5] = #30000 1'b0;
+	ent[5] = #30000 1'b1;
+	ent[5] = #120000 1'b0;
+	ent[5] = #60000 1'b1;
+	ent[5] = #30000 1'b0;
+end 
+// ent[ 4 ]
+initial
+begin
+	ent[4] = 1'b0;
+	ent[4] = #90000 1'b1;
+	ent[4] = #90000 1'b0;
+	ent[4] = #30000 1'b1;
+	ent[4] = #30000 1'b0;
+	ent[4] = #90000 1'b1;
+	ent[4] = #90000 1'b0;
+	ent[4] = #60000 1'b1;
+	ent[4] = #30000 1'b0;
+	ent[4] = #60000 1'b1;
+	ent[4] = #60000 1'b0;
+	ent[4] = #30000 1'b1;
+	ent[4] = #30000 1'b0;
+	ent[4] = #30000 1'b1;
+	ent[4] = #90000 1'b0;
+	ent[4] = #60000 1'b1;
+	ent[4] = #120000 1'b0;
+end 
+// ent[ 3 ]
+initial
+begin
+	ent[3] = 1'b0;
+	ent[3] = #30000 1'b1;
+	ent[3] = #60000 1'b0;
+	ent[3] = #30000 1'b1;
+	ent[3] = #150000 1'b0;
+	ent[3] = #60000 1'b1;
+	ent[3] = #90000 1'b0;
+	ent[3] = #30000 1'b1;
+	ent[3] = #60000 1'b0;
+	ent[3] = #90000 1'b1;
+	ent[3] = #30000 1'b0;
+	ent[3] = #30000 1'b1;
+	ent[3] = #30000 1'b0;
+	ent[3] = #270000 1'b1;
+end 
+// ent[ 2 ]
+initial
+begin
+	ent[2] = 1'b1;
+	ent[2] = #60000 1'b0;
+	ent[2] = #30000 1'b1;
+	ent[2] = #30000 1'b0;
+	ent[2] = #30000 1'b1;
+	ent[2] = #120000 1'b0;
+	ent[2] = #120000 1'b1;
+	ent[2] = #30000 1'b0;
+	ent[2] = #30000 1'b1;
+	ent[2] = #210000 1'b0;
+	ent[2] = #30000 1'b1;
+	ent[2] = #60000 1'b0;
+	ent[2] = #30000 1'b1;
+	ent[2] = #60000 1'b0;
+	ent[2] = #30000 1'b1;
+end 
+// ent[ 1 ]
+initial
+begin
+	ent[1] = 1'b1;
+	ent[1] = #30000 1'b0;
+	ent[1] = #90000 1'b1;
+	ent[1] = #30000 1'b0;
+	ent[1] = #120000 1'b1;
+	ent[1] = #30000 1'b0;
+	ent[1] = #30000 1'b1;
+	ent[1] = #120000 1'b0;
+	ent[1] = #30000 1'b1;
+	ent[1] = #30000 1'b0;
+	ent[1] = #90000 1'b1;
+	ent[1] = #120000 1'b0;
+	ent[1] = #30000 1'b1;
+	ent[1] = #60000 1'b0;
+	ent[1] = #30000 1'b1;
+	ent[1] = #30000 1'b0;
+end 
+// ent[ 0 ]
+initial
+begin
+	ent[0] = 1'b0;
+	ent[0] = #60000 1'b1;
+	ent[0] = #60000 1'b0;
+	ent[0] = #60000 1'b1;
+	ent[0] = #30000 1'b0;
+	ent[0] = #30000 1'b1;
+	ent[0] = #90000 1'b0;
+	ent[0] = #30000 1'b1;
+	ent[0] = #90000 1'b0;
+	ent[0] = #60000 1'b1;
+	ent[0] = #30000 1'b0;
+	ent[0] = #60000 1'b1;
+	ent[0] = #60000 1'b0;
+	ent[0] = #120000 1'b1;
+	ent[0] = #90000 1'b0;
+	ent[0] = #30000 1'b1;
+	ent[0] = #90000 1'b0;
+end 
+
+// R
+initial
+begin
+	R = 1'b0;
+	R = #30000 1'b1;
+	R = #30000 1'b0;
+	R = #30000 1'b1;
+	R = #30000 1'b0;
+	R = #30000 1'b1;
+	R = #60000 1'b0;
+	R = #30000 1'b1;
+	R = #30000 1'b0;
+	R = #90000 1'b1;
+	R = #30000 1'b0;
+	R = #30000 1'b1;
+	R = #60000 1'b0;
+	R = #30000 1'b1;
+	R = #30000 1'b0;
+	R = #30000 1'b1;
+	R = #30000 1'b0;
+	R = #60000 1'b1;
+	R = #30000 1'b0;
+	R = #60000 1'b1;
+	R = #30000 1'b0;
+	R = #20000 1'b1;
+	R = #190000 1'b0;
+end 
+
+// W
+initial
+begin
+	W = 1'b1;
+	W = #450000 1'b0;
+	W = #60000 1'b1;
+	W = #30000 1'b0;
+	W = #30000 1'b1;
+	W = #60000 1'b0;
+	W = #30000 1'b1;
+	W = #30000 1'b0;
+	W = #30000 1'b1;
+	W = #60000 1'b0;
+end 
+
+memRAM_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.ent(ent),
+	.key(key),
+	.R(R),
+	.reset(reset),
+	.W(W),
+	.sampler_tx(sampler)
+);
+
+memRAM_vlg_check_tst tb_out(
+	.saida(saida),
+	.sampler_rx(sampler)
+);
+endmodule
+
