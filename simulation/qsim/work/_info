@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lu_fe\Downloads\NEANDER2\simulation\qsim
+vNEANDER
+Z1 !s100 L`@M8_g==I77dRIz1<>ma3
+Z2 I7f@=CgZo]KIV=1YP7XzFJ0
+Z3 VhUS1>_5V;2bS?97aNn?mW3
+Z4 dC:\Users\lu_fe\Downloads\NEANDER2\simulation\qsim
+Z5 w1560860854
+Z6 8NEANDER.vo
+Z7 FNEANDER.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|NEANDER.vo|
+Z10 o-work work -O0
+Z11 n@n@e@a@n@d@e@r
+!i10b 1
+!s85 0
+Z12 !s108 1560860856.378000
+Z13 !s107 NEANDER.vo|
+!s101 -O0
+vNEANDER_vlg_check_tst
+!i10b 1
+!s100 EAczD6[m5VDJ<Yh9kMJiG1
+ILz8oPRIQ1F@CM[X91fn6h2
+Z14 VBMWzg`lNM6To>HWBlIT>j3
+R4
+Z15 w1560860852
+Z16 8NEANDER.vt
+Z17 FNEANDER.vt
+L0 65
+R8
+r1
+!s85 0
+31
+Z18 !s108 1560860856.855000
+Z19 !s107 NEANDER.vt|
+Z20 !s90 -work|work|NEANDER.vt|
+!s101 -O0
+R10
+Z21 n@n@e@a@n@d@e@r_vlg_check_tst
+vNEANDER_vlg_sample_tst
+!i10b 1
+Z22 !s100 z_HF8KA1DT?W?k@ngEd6i1
+Z23 Iz5X6iW3Y``l`iE?iFXlN13
+Z24 V<2fC30:@6lkKa[0P^2WGA1
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z25 n@n@e@a@n@d@e@r_vlg_sample_tst
+vNEANDER_vlg_vec_tst
+!i10b 1
+!s100 2mmOz85WjR`eE]Q]7JlW01
+I0EN2ib@0DgX1L:8mkU7k02
+Z26 Va4EUgA6L5fY8T[ZLecC@G2
+R4
+R15
+R16
+R17
+L0 1742
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z27 n@n@e@a@n@d@e@r_vlg_vec_tst
