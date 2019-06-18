@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lu_fe\Downloads\NEANDER2\Components\UAL\simulation\qsim
+vUAL
+Z1 ISYb`6GZVH4N_Ch@2efO;O2
+Z2 VXH2bzIJBA:NlP>0C?@3o]1
+Z3 dC:\Users\lu_fe\Downloads\NEANDER2\Components\UAL\simulation\qsim
+Z4 w1560475331
+Z5 8UAL.vo
+Z6 FUAL.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@u@a@l
+!i10b 1
+Z10 !s100 Lj_zgE3NJBFJJdcKX3Rgn2
+!s85 0
+Z11 !s108 1560475332.104000
+Z12 !s107 UAL.vo|
+Z13 !s90 -work|work|UAL.vo|
+!s101 -O0
+vUAL_vlg_check_tst
+!i10b 1
+!s100 FTjVgVVLme5lXNIbR54ka1
+IHWQn4BUP1Z1nY:o1E>?cT2
+V1W:4keSRA=UgR]1MaOE=F0
+R3
+Z14 w1560475330
+Z15 8UAL.vt
+Z16 FUAL.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z17 !s108 1560475332.245000
+Z18 !s107 UAL.vt|
+Z19 !s90 -work|work|UAL.vt|
+!s101 -O0
+R8
+n@u@a@l_vlg_check_tst
+vUAL_vlg_sample_tst
+!i10b 1
+!s100 aP@nQ<YWe0RLQkDWcg8cJ2
+IXe[hgVa>BRa6<6b8Hn;?H0
+V>6<j`YM^JOh6KJczGPE=?1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@u@a@l_vlg_sample_tst
+vUAL_vlg_vec_tst
+!i10b 1
+!s100 ZQ5CF^]T58JalT=`el;XV2
+IA6Yn5TG;Lf5aZik>RX9GF3
+V:8I;=A?GUJQGI9`X8:`K41
+R3
+R14
+R15
+R16
+L0 335
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@u@a@l_vlg_vec_tst
