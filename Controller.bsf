@@ -1,0 +1,162 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 160 376 336)
+	(text "Controller" (rect 136 56 183 68)(font "Arial" ))
+	(text "inst" (rect 8 160 25 172)(font "Arial" ))
+	(port
+		(pt 0 136)
+		(input)
+		(text "reset" (rect 0 -96 24 -84)(font "Arial" ))
+		(text "reset" (rect 21 131 45 143)(font "Arial" ))
+		(line (pt 0 136)(pt 16 136))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "clock" (rect 0 -96 25 -84)(font "Arial" ))
+		(text "clock" (rect 21 115 46 127)(font "Arial" ))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "go" (rect 0 -96 11 -84)(font "Arial" ))
+		(text "go" (rect 21 43 32 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 96 0)
+		(input)
+		(text "NZ[1..0]" (rect 0 -96 41 -84)(font "Arial" ))
+		(text "NZ[1..0]" (rect 88 25 100 66)(font "Arial" )(vertical))
+		(line (pt 96 0)(pt 96 16)(line_width 3))
+	)
+	(port
+		(pt 208 0)
+		(input)
+		(text "code[3..0]" (rect 0 -96 49 -84)(font "Arial" ))
+		(text "code[3..0]" (rect 200 25 212 74)(font "Arial" )(vertical))
+		(line (pt 208 0)(pt 208 17)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "choice[1..0]" (rect 0 -96 57 -84)(font "Arial" ))
+		(text "choice[1..0]" (rect 21 59 78 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 88 176)
+		(output)
+		(text "load_AC" (rect 416 -96 457 -84)(font "Arial" ))
+		(text "load_AC" (rect 80 111 92 152)(font "Arial" )(vertical))
+		(line (pt 88 176)(pt 88 161))
+	)
+	(port
+		(pt 104 176)
+		(output)
+		(text "load_PC" (rect 416 -96 457 -84)(font "Arial" ))
+		(text "load_PC" (rect 96 111 108 152)(font "Arial" )(vertical))
+		(line (pt 104 176)(pt 104 161))
+	)
+	(port
+		(pt 120 176)
+		(output)
+		(text "load_REM" (rect 416 -96 465 -84)(font "Arial" ))
+		(text "load_REM" (rect 112 103 124 152)(font "Arial" )(vertical))
+		(line (pt 120 176)(pt 120 160))
+	)
+	(port
+		(pt 136 176)
+		(output)
+		(text "load_RDM" (rect 416 -96 466 -84)(font "Arial" ))
+		(text "load_RDM" (rect 128 102 140 152)(font "Arial" )(vertical))
+		(line (pt 136 176)(pt 136 161))
+	)
+	(port
+		(pt 152 176)
+		(output)
+		(text "load_RI" (rect 416 -96 453 -84)(font "Arial" ))
+		(text "load_RI" (rect 144 115 156 152)(font "Arial" )(vertical))
+		(line (pt 152 176)(pt 152 161))
+	)
+	(port
+		(pt 168 176)
+		(output)
+		(text "load_NZ" (rect 416 -96 457 -84)(font "Arial" ))
+		(text "load_NZ" (rect 160 111 172 152)(font "Arial" )(vertical))
+		(line (pt 168 176)(pt 168 161))
+	)
+	(port
+		(pt 184 176)
+		(output)
+		(text "selREM" (rect 416 -96 453 -84)(font "Arial" ))
+		(text "selREM" (rect 176 115 188 152)(font "Arial" )(vertical))
+		(line (pt 184 176)(pt 184 161))
+	)
+	(port
+		(pt 200 176)
+		(output)
+		(text "selRDM[1..0]" (rect 416 -96 480 -84)(font "Arial" ))
+		(text "selRDM[1..0]" (rect 192 88 204 152)(font "Arial" )(vertical))
+		(line (pt 200 176)(pt 200 161)(line_width 3))
+	)
+	(port
+		(pt 216 176)
+		(output)
+		(text "selUAL[2..0]" (rect 416 -96 477 -84)(font "Arial" ))
+		(text "selUAL[2..0]" (rect 208 91 220 152)(font "Arial" )(vertical))
+		(line (pt 216 176)(pt 216 161)(line_width 3))
+	)
+	(port
+		(pt 232 176)
+		(output)
+		(text "sumPC" (rect 416 -96 452 -84)(font "Arial" ))
+		(text "sumPC" (rect 224 116 236 152)(font "Arial" )(vertical))
+		(line (pt 232 176)(pt 232 161))
+	)
+	(port
+		(pt 248 176)
+		(output)
+		(text "writeOn" (rect 416 -96 452 -84)(font "Arial" ))
+		(text "writeOn" (rect 240 116 252 152)(font "Arial" )(vertical))
+		(line (pt 248 176)(pt 248 161))
+	)
+	(port
+		(pt 264 176)
+		(output)
+		(text "readOn" (rect 416 -96 451 -84)(font "Arial" ))
+		(text "readOn" (rect 256 117 268 152)(font "Arial" )(vertical))
+		(line (pt 264 176)(pt 264 161))
+	)
+	(port
+		(pt 280 176)
+		(output)
+		(text "turnDspOn" (rect 416 -96 469 -84)(font "Arial" ))
+		(text "turnDspOn" (rect 272 99 284 152)(font "Arial" )(vertical))
+		(line (pt 280 176)(pt 280 161))
+	)
+	(drawing
+		(rectangle (rect 16 1 304 161))
+	)
+)

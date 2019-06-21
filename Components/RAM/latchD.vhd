@@ -12,7 +12,7 @@ architecture ffd of memCell is
 signal reg: std_logic_vector(7 downto 0) := (others => '0');
 signal ld: std_logic;
     begin
-		process(reg,X,Y)
+		process(reg,X,Y,W)
 		begin
 			if X ='1' and Y ='1' then
 				saida <= reg;

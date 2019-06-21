@@ -1,0 +1,57 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 272 176)
+	(text "MuxRem" (rect 5 0 48 12)(font "Arial" ))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(port
+		(pt 112 112)
+		(input)
+		(text "selRem" (rect 0 0 37 12)(font "Arial" ))
+		(text "selRem" (rect 104 49 116 86)(font "Arial" )(vertical))
+		(line (pt 112 112)(pt 112 95))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "inRem1[7..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "inRem1[7..0]" (rect 21 35 84 47)(font "Arial" ))
+		(line (pt 0 40)(pt 16 40)(line_width 3))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "inRem2[7..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "inRem2[7..0]" (rect 21 67 84 79)(font "Arial" ))
+		(line (pt 0 72)(pt 16 72)(line_width 3))
+	)
+	(port
+		(pt 208 56)
+		(output)
+		(text "outRem[7..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "outRem[7..0]" (rect 133 51 187 63)(font "Arial" ))
+		(line (pt 208 56)(pt 192 56)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+)

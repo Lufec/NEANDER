@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity sum8b is
+	port (a :in std_logic_vector (7 downto 0);
+			sub: in std_logic;
+			s:out std_logic_vector(7 downto 0));
+end entity;
+
+architecture soma of sum8b is
+	signal cin: std_logic_vector (7 downto 0);
+	begin
+	cin(0) <= sub;
+	s(0)<= a(0) xor cin(0);
+	
+	sum:for i in 1 to 7 generate
+	cin(i)<= a(i-1) and cin(i-1);
+	s(i)<= a(i) xor cin(i);
+	end generate;
+
+end soma;

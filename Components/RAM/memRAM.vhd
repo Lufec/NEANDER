@@ -4,7 +4,7 @@ entity memRAM is
 	port(
 		ent: in std_logic_vector(7 downto 0);
 		key: in std_logic_vector(7 downto 0);
-		W,R,reset,clk: in std_logic;
+		R,W,reset,clk: in std_logic;
 		saida: out std_logic_vector(7 downto 0)	
 	);
 end memRAM;

@@ -50,26 +50,7 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name BDF_FILE NEANDER.bdf
-set_global_assignment -name SMF_FILE Components/CONTROLER/Controller.smf
-set_global_assignment -name VHDL_FILE Components/CONTROLER/Controller.vhd
-set_global_assignment -name VHDL_FILE Components/DISPLAY/Display.vhd
-set_global_assignment -name VHDL_FILE Components/DISPLAY/disp1.vhd
-set_global_assignment -name VHDL_FILE Components/UAL/UAL.vhd
-set_global_assignment -name VHDL_FILE Components/RI/RI.vhd
-set_global_assignment -name VHDL_FILE Components/REM/REMreg.vhd
-set_global_assignment -name VHDL_FILE Components/RDM/RDMreg.vhd
-set_global_assignment -name VHDL_FILE Components/RAM/memRAM.vhd
-set_global_assignment -name VHDL_FILE Components/RAM/latchD.vhd
-set_global_assignment -name VHDL_FILE Components/RAM/decoder.vhd
-set_global_assignment -name VHDL_FILE Components/PC/PC.vhd
-set_global_assignment -name VHDL_FILE Components/NZ/NZ.vhd
-set_global_assignment -name VHDL_FILE Components/MUXREM/MuxRem.vhd
-set_global_assignment -name VHDL_FILE Components/MUXRDM/MuxRDM.vhd
-set_global_assignment -name VHDL_FILE Components/DECODER/decoder.vhd
-set_global_assignment -name VHDL_FILE Components/AC/AC.vhd
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
@@ -124,5 +105,27 @@ set_location_assignment PIN_AC25 -to DisplayAC1[2]
 set_location_assignment PIN_V22 -to DisplayAC1[1]
 set_location_assignment PIN_AB23 -to DisplayAC1[0]
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/lu_fe/Downloads/NEANDER2/Waveform.vwf"
+set_global_assignment -name BDF_FILE NEANDER.bdf
+set_global_assignment -name SMF_FILE Components/CONTROLER/Controller.smf
+set_global_assignment -name VHDL_FILE Components/CONTROLER/Controller.vhd
+set_global_assignment -name VHDL_FILE Components/DISPLAY/Display.vhd
+set_global_assignment -name VHDL_FILE Components/DISPLAY/disp1.vhd
+set_global_assignment -name VHDL_FILE Components/UAL/UAL.vhd
+set_global_assignment -name VHDL_FILE Components/RI/RI.vhd
+set_global_assignment -name VHDL_FILE Components/REM/REMreg.vhd
+set_global_assignment -name VHDL_FILE Components/RDM/RDMreg.vhd
+set_global_assignment -name VHDL_FILE Components/RAM/memRAM.vhd
+set_global_assignment -name VHDL_FILE Components/RAM/latchD.vhd
+set_global_assignment -name VHDL_FILE Components/RAM/decoder.vhd
+set_global_assignment -name VHDL_FILE Components/PC/PC.vhd
+set_global_assignment -name VHDL_FILE Components/NZ/NZ.vhd
+set_global_assignment -name VHDL_FILE Components/MUXREM/MuxRem.vhd
+set_global_assignment -name VHDL_FILE Components/MUXRDM/MuxRDM.vhd
+set_global_assignment -name VHDL_FILE Components/DECODER/decoder.vhd
+set_global_assignment -name VHDL_FILE Components/AC/AC.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_global_assignment -name VHDL_FILE Components/DISPLAY/sum8b.vhd
+set_location_assignment PIN_AD12 -to negAC
+set_location_assignment PIN_AE22 -to negData
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
