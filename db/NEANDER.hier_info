@@ -3,7 +3,7 @@ loadAc <= Controller:inst2.load_AC
 reset => Controller:inst2.reset
 reset => RI:inst18.reset
 reset => RDMreg:inst24.reset
-reset => memRAM:inst4.reset
+reset => memRAM:inst6.reset
 reset => REMreg:inst25.reset
 reset => PC:inst21.reset
 reset => AC:inst.reset
@@ -11,7 +11,7 @@ reset => NZ:inst15.reset
 clk => Controller:inst2.clock
 clk => RI:inst18.clk
 clk => RDMreg:inst24.clk
-clk => memRAM:inst4.clk
+clk => memRAM:inst6.clk
 clk => REMreg:inst25.clk
 clk => PC:inst21.clk
 clk => AC:inst.clk
@@ -21,8 +21,8 @@ choice[0] => Controller:inst2.choice[0]
 choice[1] => Controller:inst2.choice[1]
 loadri <= Controller:inst2.load_RI
 loadrdm <= Controller:inst2.load_RDM
-write <= Controller:inst2.writeOn
 read <= Controller:inst2.readOn
+write <= Controller:inst2.writeOn
 loadrem <= Controller:inst2.load_REM
 selrem <= Controller:inst2.selREM
 loadpc <= Controller:inst2.load_PC
@@ -42,6 +42,8 @@ selrdm[0] <= Controller:inst2.selRDM[0]
 selrdm[1] <= Controller:inst2.selRDM[1]
 loadnz <= Controller:inst2.load_NZ
 TurndspOn <= Controller:inst2.turnDspOn
+negAC <= Display:inst1.negAC
+negData <= Display:inst1.negData
 ac[0] <= AC_out[0].DB_MAX_OUTPUT_PORT_TYPE
 ac[1] <= AC_out[1].DB_MAX_OUTPUT_PORT_TYPE
 ac[2] <= AC_out[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -54,49 +56,49 @@ code[0] <= decoder:inst5.decoded[0]
 code[1] <= decoder:inst5.decoded[1]
 code[2] <= decoder:inst5.decoded[2]
 code[3] <= decoder:inst5.decoded[3]
-dado[0] <= memRAM:inst4.saida[0]
-dado[1] <= memRAM:inst4.saida[1]
-dado[2] <= memRAM:inst4.saida[2]
-dado[3] <= memRAM:inst4.saida[3]
-dado[4] <= memRAM:inst4.saida[4]
-dado[5] <= memRAM:inst4.saida[5]
-dado[6] <= memRAM:inst4.saida[6]
-dado[7] <= memRAM:inst4.saida[7]
-DisplayAC1[0] <= Display:inst7.dispAC1[0]
-DisplayAC1[1] <= Display:inst7.dispAC1[1]
-DisplayAC1[2] <= Display:inst7.dispAC1[2]
-DisplayAC1[3] <= Display:inst7.dispAC1[3]
-DisplayAC1[4] <= Display:inst7.dispAC1[4]
-DisplayAC1[5] <= Display:inst7.dispAC1[5]
-DisplayAC1[6] <= Display:inst7.dispAC1[6]
-DisplayAC2[0] <= Display:inst7.dispAC2[0]
-DisplayAC2[1] <= Display:inst7.dispAC2[1]
-DisplayAC2[2] <= Display:inst7.dispAC2[2]
-DisplayAC2[3] <= Display:inst7.dispAC2[3]
-DisplayAC2[4] <= Display:inst7.dispAC2[4]
-DisplayAC2[5] <= Display:inst7.dispAC2[5]
-DisplayAC2[6] <= Display:inst7.dispAC2[6]
-DisplayAdd[0] <= Display:inst7.dispAdd[0]
-DisplayAdd[1] <= Display:inst7.dispAdd[1]
-DisplayAdd[2] <= Display:inst7.dispAdd[2]
-DisplayAdd[3] <= Display:inst7.dispAdd[3]
-DisplayAdd[4] <= Display:inst7.dispAdd[4]
-DisplayAdd[5] <= Display:inst7.dispAdd[5]
-DisplayAdd[6] <= Display:inst7.dispAdd[6]
-DisplayD1[0] <= Display:inst7.dispD1[0]
-DisplayD1[1] <= Display:inst7.dispD1[1]
-DisplayD1[2] <= Display:inst7.dispD1[2]
-DisplayD1[3] <= Display:inst7.dispD1[3]
-DisplayD1[4] <= Display:inst7.dispD1[4]
-DisplayD1[5] <= Display:inst7.dispD1[5]
-DisplayD1[6] <= Display:inst7.dispD1[6]
-DisplayD2[0] <= Display:inst7.dispD2[0]
-DisplayD2[1] <= Display:inst7.dispD2[1]
-DisplayD2[2] <= Display:inst7.dispD2[2]
-DisplayD2[3] <= Display:inst7.dispD2[3]
-DisplayD2[4] <= Display:inst7.dispD2[4]
-DisplayD2[5] <= Display:inst7.dispD2[5]
-DisplayD2[6] <= Display:inst7.dispD2[6]
+dado[0] <= memRAM:inst6.saida[0]
+dado[1] <= memRAM:inst6.saida[1]
+dado[2] <= memRAM:inst6.saida[2]
+dado[3] <= memRAM:inst6.saida[3]
+dado[4] <= memRAM:inst6.saida[4]
+dado[5] <= memRAM:inst6.saida[5]
+dado[6] <= memRAM:inst6.saida[6]
+dado[7] <= memRAM:inst6.saida[7]
+DisplayAC1[0] <= Display:inst1.dispAC1[0]
+DisplayAC1[1] <= Display:inst1.dispAC1[1]
+DisplayAC1[2] <= Display:inst1.dispAC1[2]
+DisplayAC1[3] <= Display:inst1.dispAC1[3]
+DisplayAC1[4] <= Display:inst1.dispAC1[4]
+DisplayAC1[5] <= Display:inst1.dispAC1[5]
+DisplayAC1[6] <= Display:inst1.dispAC1[6]
+DisplayAC2[0] <= Display:inst1.dispAC2[0]
+DisplayAC2[1] <= Display:inst1.dispAC2[1]
+DisplayAC2[2] <= Display:inst1.dispAC2[2]
+DisplayAC2[3] <= Display:inst1.dispAC2[3]
+DisplayAC2[4] <= Display:inst1.dispAC2[4]
+DisplayAC2[5] <= Display:inst1.dispAC2[5]
+DisplayAC2[6] <= Display:inst1.dispAC2[6]
+DisplayAdd[0] <= Display:inst1.dispAdd[0]
+DisplayAdd[1] <= Display:inst1.dispAdd[1]
+DisplayAdd[2] <= Display:inst1.dispAdd[2]
+DisplayAdd[3] <= Display:inst1.dispAdd[3]
+DisplayAdd[4] <= Display:inst1.dispAdd[4]
+DisplayAdd[5] <= Display:inst1.dispAdd[5]
+DisplayAdd[6] <= Display:inst1.dispAdd[6]
+DisplayD1[0] <= Display:inst1.dispD1[0]
+DisplayD1[1] <= Display:inst1.dispD1[1]
+DisplayD1[2] <= Display:inst1.dispD1[2]
+DisplayD1[3] <= Display:inst1.dispD1[3]
+DisplayD1[4] <= Display:inst1.dispD1[4]
+DisplayD1[5] <= Display:inst1.dispD1[5]
+DisplayD1[6] <= Display:inst1.dispD1[6]
+DisplayD2[0] <= Display:inst1.dispD2[0]
+DisplayD2[1] <= Display:inst1.dispD2[1]
+DisplayD2[2] <= Display:inst1.dispD2[2]
+DisplayD2[3] <= Display:inst1.dispD2[3]
+DisplayD2[4] <= Display:inst1.dispD2[4]
+DisplayD2[5] <= Display:inst1.dispD2[5]
+DisplayD2[6] <= Display:inst1.dispD2[6]
 endereco[0] <= REMreg:inst25.dataOut[0]
 endereco[1] <= REMreg:inst25.dataOut[1]
 endereco[2] <= REMreg:inst25.dataOut[2]
@@ -105,6 +107,8 @@ endereco[4] <= REMreg:inst25.dataOut[4]
 endereco[5] <= REMreg:inst25.dataOut[5]
 endereco[6] <= REMreg:inst25.dataOut[6]
 endereco[7] <= REMreg:inst25.dataOut[7]
+NZ[0] <= NZ:inst15.dataOut[0]
+NZ[1] <= NZ:inst15.dataOut[1]
 
 
 |NEANDER|Controller:inst2
@@ -168,33 +172,33 @@ go => reg_fstate.DATAB
 go => Selector10.IN1
 NZ[0] => Selector3.IN1
 NZ[0] => Selector5.IN2
-NZ[1] => Selector5.IN4
 NZ[1] => Selector3.IN2
-code[0] => Equal0.IN1
-code[0] => Equal1.IN3
-code[0] => Equal2.IN2
-code[0] => Equal3.IN3
-code[0] => Equal4.IN2
-code[0] => Equal5.IN3
-code[0] => Equal6.IN3
-code[0] => Equal7.IN1
+NZ[1] => Selector5.IN3
+code[0] => Equal0.IN3
+code[0] => Equal1.IN2
+code[0] => Equal2.IN3
+code[0] => Equal3.IN2
+code[0] => Equal4.IN3
+code[0] => Equal5.IN1
+code[0] => Equal6.IN1
+code[0] => Equal7.IN3
 code[0] => Equal8.IN3
 code[0] => Equal9.IN2
-code[1] => Equal0.IN3
-code[1] => Equal1.IN2
-code[1] => Equal2.IN3
-code[1] => Equal3.IN2
+code[1] => Equal0.IN2
+code[1] => Equal1.IN3
+code[1] => Equal2.IN2
+code[1] => Equal3.IN1
 code[1] => Equal4.IN1
-code[1] => Equal5.IN1
-code[1] => Equal6.IN1
-code[1] => Equal7.IN3
+code[1] => Equal5.IN3
+code[1] => Equal6.IN3
+code[1] => Equal7.IN1
 code[1] => Equal8.IN2
 code[1] => Equal9.IN1
-code[2] => Equal0.IN2
+code[2] => Equal0.IN1
 code[2] => Equal1.IN1
 code[2] => Equal2.IN1
-code[2] => Equal3.IN1
-code[2] => Equal4.IN3
+code[2] => Equal3.IN3
+code[2] => Equal4.IN2
 code[2] => Equal5.IN2
 code[2] => Equal6.IN0
 code[2] => Equal7.IN0
@@ -396,7 +400,7 @@ outRdm[6] <= outRdm.DB_MAX_OUTPUT_PORT_TYPE
 outRdm[7] <= outRdm.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4
+|NEANDER|memRAM:inst6
 ent[0] => memCell:genx:0:geny:0:gen.ent[0]
 ent[0] => memCell:genx:0:geny:1:gen.ent[0]
 ent[0] => memCell:genx:0:geny:2:gen.ent[0]
@@ -533,6 +537,14 @@ key[4] => ~NO_FANOUT~
 key[5] => ~NO_FANOUT~
 key[6] => ~NO_FANOUT~
 key[7] => ~NO_FANOUT~
+R => saida.IN1
+R => saida.IN1
+R => saida.IN1
+R => saida.IN1
+R => saida.IN1
+R => saida.IN1
+R => saida.IN1
+R => saida.IN1
 W => memCell:genx:0:geny:0:gen.W
 W => memCell:genx:0:geny:1:gen.W
 W => memCell:genx:0:geny:2:gen.W
@@ -549,14 +561,6 @@ W => memCell:genx:3:geny:0:gen.W
 W => memCell:genx:3:geny:1:gen.W
 W => memCell:genx:3:geny:2:gen.W
 W => memCell:genx:3:geny:3:gen.W
-R => saida.IN1
-R => saida.IN1
-R => saida.IN1
-R => saida.IN1
-R => saida.IN1
-R => saida.IN1
-R => saida.IN1
-R => saida.IN1
 reset => memCell:genx:0:geny:0:gen.reset
 reset => memCell:genx:0:geny:1:gen.reset
 reset => memCell:genx:0:geny:2:gen.reset
@@ -599,7 +603,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|decoder_2_4:decodX
+|NEANDER|memRAM:inst6|decoder_2_4:decodX
 key[0] => sel.IN0
 key[0] => sel.IN0
 key[0] => sel.IN0
@@ -614,7 +618,7 @@ sel[2] <= sel.DB_MAX_OUTPUT_PORT_TYPE
 sel[3] <= sel.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|decoder_2_4:decodY
+|NEANDER|memRAM:inst6|decoder_2_4:decodY
 key[0] => sel.IN0
 key[0] => sel.IN0
 key[0] => sel.IN0
@@ -629,7 +633,7 @@ sel[2] <= sel.DB_MAX_OUTPUT_PORT_TYPE
 sel[3] <= sel.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:0:geny:0:gen
+|NEANDER|memRAM:inst6|memCell:\genx:0:geny:0:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -667,7 +671,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:0:geny:1:gen
+|NEANDER|memRAM:inst6|memCell:\genx:0:geny:1:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -705,7 +709,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:0:geny:2:gen
+|NEANDER|memRAM:inst6|memCell:\genx:0:geny:2:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -743,7 +747,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:0:geny:3:gen
+|NEANDER|memRAM:inst6|memCell:\genx:0:geny:3:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -781,7 +785,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:1:geny:0:gen
+|NEANDER|memRAM:inst6|memCell:\genx:1:geny:0:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -819,7 +823,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:1:geny:1:gen
+|NEANDER|memRAM:inst6|memCell:\genx:1:geny:1:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -857,7 +861,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:1:geny:2:gen
+|NEANDER|memRAM:inst6|memCell:\genx:1:geny:2:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -895,7 +899,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:1:geny:3:gen
+|NEANDER|memRAM:inst6|memCell:\genx:1:geny:3:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -933,7 +937,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:2:geny:0:gen
+|NEANDER|memRAM:inst6|memCell:\genx:2:geny:0:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -971,7 +975,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:2:geny:1:gen
+|NEANDER|memRAM:inst6|memCell:\genx:2:geny:1:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -1009,7 +1013,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:2:geny:2:gen
+|NEANDER|memRAM:inst6|memCell:\genx:2:geny:2:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -1047,7 +1051,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:2:geny:3:gen
+|NEANDER|memRAM:inst6|memCell:\genx:2:geny:3:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -1085,7 +1089,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:3:geny:0:gen
+|NEANDER|memRAM:inst6|memCell:\genx:3:geny:0:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -1123,7 +1127,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:3:geny:1:gen
+|NEANDER|memRAM:inst6|memCell:\genx:3:geny:1:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -1161,7 +1165,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:3:geny:2:gen
+|NEANDER|memRAM:inst6|memCell:\genx:3:geny:2:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -1199,7 +1203,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|memRAM:inst4|memCell:\genx:3:geny:3:gen
+|NEANDER|memRAM:inst6|memCell:\genx:3:geny:3:gen
 clk => reg[0].CLK
 clk => reg[1].CLK
 clk => reg[2].CLK
@@ -1535,31 +1539,77 @@ dataOut[0] <= reg[0].DB_MAX_OUTPUT_PORT_TYPE
 dataOut[1] <= reg[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|Display:inst7
+|NEANDER|Display:inst1
+adress[0] => LessThan0.IN16
 adress[0] => display1:dsp3.y[0]
+adress[1] => LessThan0.IN15
 adress[1] => display1:dsp3.y[1]
+adress[2] => LessThan0.IN14
 adress[2] => display1:dsp3.y[2]
+adress[3] => LessThan0.IN13
 adress[3] => display1:dsp3.y[3]
-adress[4] => ~NO_FANOUT~
-adress[5] => ~NO_FANOUT~
-adress[6] => ~NO_FANOUT~
-adress[7] => ~NO_FANOUT~
-data[0] => display1:dsp2.y[0]
-data[1] => display1:dsp2.y[1]
-data[2] => display1:dsp2.y[2]
-data[3] => display1:dsp2.y[3]
-data[4] => display1:dsp1.y[0]
-data[5] => display1:dsp1.y[1]
-data[6] => display1:dsp1.y[2]
-data[7] => display1:dsp1.y[3]
-AC[0] => display1:dsp5.y[0]
-AC[1] => display1:dsp5.y[1]
-AC[2] => display1:dsp5.y[2]
-AC[3] => display1:dsp5.y[3]
-AC[4] => display1:dsp4.y[0]
-AC[5] => display1:dsp4.y[1]
-AC[6] => display1:dsp4.y[2]
-AC[7] => display1:dsp4.y[3]
+adress[4] => LessThan0.IN12
+adress[5] => LessThan0.IN11
+adress[6] => LessThan0.IN10
+adress[7] => LessThan0.IN9
+data[0] => dataAux.DATAA
+data[0] => disp2[0].DATAB
+data[0] => sum8b:inD.a[0]
+data[1] => dataAux.DATAA
+data[1] => disp2[1].DATAB
+data[1] => sum8b:inD.a[1]
+data[2] => dataAux.DATAA
+data[2] => disp2[2].DATAB
+data[2] => sum8b:inD.a[2]
+data[3] => dataAux.DATAA
+data[3] => disp2[3].DATAB
+data[3] => sum8b:inD.a[3]
+data[4] => dataAux.DATAA
+data[4] => disp1[0].DATAB
+data[4] => sum8b:inD.a[4]
+data[5] => dataAux.DATAA
+data[5] => disp1[1].DATAB
+data[5] => sum8b:inD.a[5]
+data[6] => dataAux.DATAA
+data[6] => disp1[2].DATAB
+data[6] => sum8b:inD.a[6]
+data[7] => dataAux.OUTPUTSELECT
+data[7] => dataAux.OUTPUTSELECT
+data[7] => dataAux.OUTPUTSELECT
+data[7] => dataAux.OUTPUTSELECT
+data[7] => dataAux.OUTPUTSELECT
+data[7] => dataAux.OUTPUTSELECT
+data[7] => dataAux.OUTPUTSELECT
+data[7] => dataAux.OUTPUTSELECT
+data[7] => disp1[3].DATAB
+data[7] => negData.DATAA
+data[7] => sum8b:inD.sub
+data[7] => sum8b:inD.a[7]
+AC[0] => disp5[0].DATAA
+AC[0] => sum8b:invAC.a[0]
+AC[1] => disp5[1].DATAA
+AC[1] => sum8b:invAC.a[1]
+AC[2] => disp5[2].DATAA
+AC[2] => sum8b:invAC.a[2]
+AC[3] => disp5[3].DATAA
+AC[3] => sum8b:invAC.a[3]
+AC[4] => disp4[0].DATAA
+AC[4] => sum8b:invAC.a[4]
+AC[5] => disp4[1].DATAA
+AC[5] => sum8b:invAC.a[5]
+AC[6] => disp4[2].DATAA
+AC[6] => sum8b:invAC.a[6]
+AC[7] => disp4[3].OUTPUTSELECT
+AC[7] => disp4[2].OUTPUTSELECT
+AC[7] => disp4[1].OUTPUTSELECT
+AC[7] => disp4[0].OUTPUTSELECT
+AC[7] => disp5[3].OUTPUTSELECT
+AC[7] => disp5[2].OUTPUTSELECT
+AC[7] => disp5[1].OUTPUTSELECT
+AC[7] => disp5[0].OUTPUTSELECT
+AC[7] => sum8b:invAC.sub
+AC[7] => negAC.DATAIN
+AC[7] => sum8b:invAC.a[7]
 turnOn => display1:dsp1.R
 turnOn => display1:dsp2.R
 turnOn => display1:dsp3.R
@@ -1600,9 +1650,67 @@ dispAC2[3] <= display1:dsp4.dsp[3]
 dispAC2[4] <= display1:dsp4.dsp[4]
 dispAC2[5] <= display1:dsp4.dsp[5]
 dispAC2[6] <= display1:dsp4.dsp[6]
+negAC <= AC[7].DB_MAX_OUTPUT_PORT_TYPE
+negData <= negData.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|Display:inst7|display1:dsp1
+|NEANDER|Display:inst1|sum8b:inD
+a[0] => s.IN0
+a[0] => cin[1].IN0
+a[1] => s.IN1
+a[1] => cin[2].IN1
+a[2] => s.IN1
+a[2] => cin[3].IN1
+a[3] => s.IN1
+a[3] => cin[4].IN1
+a[4] => s.IN1
+a[4] => cin[5].IN1
+a[5] => s.IN1
+a[5] => cin[6].IN1
+a[6] => s.IN1
+a[6] => cin[7].IN1
+a[7] => s.IN1
+sub => s.IN1
+sub => cin[1].IN1
+s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NEANDER|Display:inst1|sum8b:invAC
+a[0] => s.IN0
+a[0] => cin[1].IN0
+a[1] => s.IN1
+a[1] => cin[2].IN1
+a[2] => s.IN1
+a[2] => cin[3].IN1
+a[3] => s.IN1
+a[3] => cin[4].IN1
+a[4] => s.IN1
+a[4] => cin[5].IN1
+a[5] => s.IN1
+a[5] => cin[6].IN1
+a[6] => s.IN1
+a[6] => cin[7].IN1
+a[7] => s.IN1
+sub => s.IN1
+sub => cin[1].IN1
+s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NEANDER|Display:inst1|display1:dsp1
 y[0] => Mux0.IN19
 y[0] => Mux1.IN19
 y[0] => Mux2.IN19
@@ -1647,7 +1755,7 @@ dsp[5] <= dsp.DB_MAX_OUTPUT_PORT_TYPE
 dsp[6] <= dsp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|Display:inst7|display1:dsp2
+|NEANDER|Display:inst1|display1:dsp2
 y[0] => Mux0.IN19
 y[0] => Mux1.IN19
 y[0] => Mux2.IN19
@@ -1692,7 +1800,7 @@ dsp[5] <= dsp.DB_MAX_OUTPUT_PORT_TYPE
 dsp[6] <= dsp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|Display:inst7|display1:dsp3
+|NEANDER|Display:inst1|display1:dsp3
 y[0] => Mux0.IN19
 y[0] => Mux1.IN19
 y[0] => Mux2.IN19
@@ -1737,7 +1845,7 @@ dsp[5] <= dsp.DB_MAX_OUTPUT_PORT_TYPE
 dsp[6] <= dsp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|Display:inst7|display1:dsp4
+|NEANDER|Display:inst1|display1:dsp4
 y[0] => Mux0.IN19
 y[0] => Mux1.IN19
 y[0] => Mux2.IN19
@@ -1782,7 +1890,7 @@ dsp[5] <= dsp.DB_MAX_OUTPUT_PORT_TYPE
 dsp[6] <= dsp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|NEANDER|Display:inst7|display1:dsp5
+|NEANDER|Display:inst1|display1:dsp5
 y[0] => Mux0.IN19
 y[0] => Mux1.IN19
 y[0] => Mux2.IN19
