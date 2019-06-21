@@ -1,5 +1,5 @@
 Analysis & Synthesis report for NEANDER
-Tue Jun 18 09:57:25 2019
+Fri Jun 21 13:12:07 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 18 09:57:24 2019           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 21 13:12:07 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; NEANDER                                         ;
 ; Top-level Entity Name              ; NEANDER                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 476                                             ;
-;     Total combinational functions  ; 339                                             ;
+; Total logic elements               ; 491                                             ;
+;     Total combinational functions  ; 354                                             ;
 ;     Dedicated logic registers      ; 200                                             ;
 ; Total registers                    ; 200                                             ;
-; Total pins                         ; 92                                              ;
+; Total pins                         ; 96                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -178,6 +178,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Components/MUXRDM/MuxRDM.vhd        ; yes             ; User VHDL File                     ; C:/Users/lu_fe/Downloads/NEANDER2/Components/MUXRDM/MuxRDM.vhd        ;         ;
 ; Components/DECODER/decoder.vhd      ; yes             ; User VHDL File                     ; C:/Users/lu_fe/Downloads/NEANDER2/Components/DECODER/decoder.vhd      ;         ;
 ; Components/AC/AC.vhd                ; yes             ; User VHDL File                     ; C:/Users/lu_fe/Downloads/NEANDER2/Components/AC/AC.vhd                ;         ;
+; Components/DISPLAY/sum8b.vhd        ; yes             ; User VHDL File                     ; C:/Users/lu_fe/Downloads/NEANDER2/Components/DISPLAY/sum8b.vhd        ;         ;
 +-------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
 
 
@@ -186,28 +187,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 476   ;
+; Estimated Total logic elements              ; 491   ;
 ;                                             ;       ;
-; Total combinational functions               ; 339   ;
+; Total combinational functions               ; 354   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 258   ;
-;     -- 3 input functions                    ; 58    ;
-;     -- <=2 input functions                  ; 23    ;
+;     -- 4 input functions                    ; 246   ;
+;     -- 3 input functions                    ; 55    ;
+;     -- <=2 input functions                  ; 53    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 332   ;
+;     -- normal mode                          ; 347   ;
 ;     -- arithmetic mode                      ; 7     ;
 ;                                             ;       ;
 ; Total registers                             ; 200   ;
 ;     -- Dedicated logic registers            ; 200   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 92    ;
+; I/O pins                                    ; 96    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 270   ;
-; Total fan-out                               ; 2110  ;
-; Average fan-out                             ; 3.34  ;
+; Maximum fan-out                             ; 243   ;
+; Total fan-out                               ; 2117  ;
+; Average fan-out                             ; 3.26  ;
 +---------------------------------------------+-------+
 
 
@@ -216,15 +217,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Library Name ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
-; |NEANDER                           ; 339 (0)           ; 200 (0)      ; 0           ; 0            ; 0       ; 0         ; 92   ; 0            ; |NEANDER                                         ; work         ;
+; |NEANDER                           ; 354 (0)           ; 200 (0)      ; 0           ; 0            ; 0       ; 0         ; 96   ; 0            ; |NEANDER                                         ; work         ;
 ;    |AC:inst|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|AC:inst                                 ; work         ;
 ;    |Controller:inst2|              ; 73 (73)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Controller:inst2                        ; work         ;
-;    |Display:inst7|                 ; 70 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst7                           ; work         ;
-;       |display1:dsp1|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst7|display1:dsp1             ; work         ;
-;       |display1:dsp2|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst7|display1:dsp2             ; work         ;
-;       |display1:dsp3|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst7|display1:dsp3             ; work         ;
-;       |display1:dsp4|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst7|display1:dsp4             ; work         ;
-;       |display1:dsp5|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst7|display1:dsp5             ; work         ;
+;    |Display:inst1|                 ; 88 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst1                           ; work         ;
+;       |display1:dsp1|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst1|display1:dsp1             ; work         ;
+;       |display1:dsp2|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst1|display1:dsp2             ; work         ;
+;       |display1:dsp3|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst1|display1:dsp3             ; work         ;
+;       |display1:dsp4|              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst1|display1:dsp4             ; work         ;
+;       |display1:dsp5|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst1|display1:dsp5             ; work         ;
+;       |sum8b:inD|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst1|sum8b:inD                 ; work         ;
+;       |sum8b:invAC|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|Display:inst1|sum8b:invAC               ; work         ;
 ;    |MuxRDM:inst22|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|MuxRDM:inst22                           ; work         ;
 ;    |MuxRem:inst20|                 ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|MuxRem:inst20                           ; work         ;
 ;    |NZ:inst15|                     ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|NZ:inst15                               ; work         ;
@@ -232,25 +235,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |RDMreg:inst24|                 ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|RDMreg:inst24                           ; work         ;
 ;    |REMreg:inst25|                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|REMreg:inst25                           ; work         ;
 ;    |RI:inst18|                     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|RI:inst18                               ; work         ;
-;    |UAL:inst17|                    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|UAL:inst17                              ; work         ;
+;    |UAL:inst17|                    ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|UAL:inst17                              ; work         ;
 ;    |decoder:inst5|                 ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|decoder:inst5                           ; work         ;
-;    |memRAM:inst4|                  ; 120 (88)          ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4                            ; work         ;
-;       |memCell:\genx:0:geny:0:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:0:geny:0:gen ; work         ;
-;       |memCell:\genx:0:geny:1:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:0:geny:1:gen ; work         ;
-;       |memCell:\genx:0:geny:2:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:0:geny:2:gen ; work         ;
-;       |memCell:\genx:0:geny:3:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:0:geny:3:gen ; work         ;
-;       |memCell:\genx:1:geny:0:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:1:geny:0:gen ; work         ;
-;       |memCell:\genx:1:geny:1:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:1:geny:1:gen ; work         ;
-;       |memCell:\genx:1:geny:2:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:1:geny:2:gen ; work         ;
-;       |memCell:\genx:1:geny:3:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:1:geny:3:gen ; work         ;
-;       |memCell:\genx:2:geny:0:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:2:geny:0:gen ; work         ;
-;       |memCell:\genx:2:geny:1:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:2:geny:1:gen ; work         ;
-;       |memCell:\genx:2:geny:2:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:2:geny:2:gen ; work         ;
-;       |memCell:\genx:2:geny:3:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:2:geny:3:gen ; work         ;
-;       |memCell:\genx:3:geny:0:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:3:geny:0:gen ; work         ;
-;       |memCell:\genx:3:geny:1:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:3:geny:1:gen ; work         ;
-;       |memCell:\genx:3:geny:2:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:3:geny:2:gen ; work         ;
-;       |memCell:\genx:3:geny:3:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst4|memCell:\genx:3:geny:3:gen ; work         ;
+;    |memRAM:inst6|                  ; 120 (88)          ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6                            ; work         ;
+;       |memCell:\genx:0:geny:0:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:0:geny:0:gen ; work         ;
+;       |memCell:\genx:0:geny:1:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:0:geny:1:gen ; work         ;
+;       |memCell:\genx:0:geny:2:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:0:geny:2:gen ; work         ;
+;       |memCell:\genx:0:geny:3:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:0:geny:3:gen ; work         ;
+;       |memCell:\genx:1:geny:0:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:1:geny:0:gen ; work         ;
+;       |memCell:\genx:1:geny:1:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:1:geny:1:gen ; work         ;
+;       |memCell:\genx:1:geny:2:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:1:geny:2:gen ; work         ;
+;       |memCell:\genx:1:geny:3:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:1:geny:3:gen ; work         ;
+;       |memCell:\genx:2:geny:0:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:2:geny:0:gen ; work         ;
+;       |memCell:\genx:2:geny:1:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:2:geny:1:gen ; work         ;
+;       |memCell:\genx:2:geny:2:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:2:geny:2:gen ; work         ;
+;       |memCell:\genx:2:geny:3:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:2:geny:3:gen ; work         ;
+;       |memCell:\genx:3:geny:0:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:3:geny:0:gen ; work         ;
+;       |memCell:\genx:3:geny:1:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:3:geny:1:gen ; work         ;
+;       |memCell:\genx:3:geny:2:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:3:geny:2:gen ; work         ;
+;       |memCell:\genx:3:geny:3:gen| ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NEANDER|memRAM:inst6|memCell:\genx:3:geny:3:gen ; work         ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -309,17 +312,17 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |NEANDER|PC:inst21|reg[3]                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |NEANDER|RDMreg:inst24|reg[2]            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |NEANDER|Controller:inst2|reg_fstate     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |NEANDER|Controller:inst2|reg_fstate.ADD ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |NEANDER|UAL:inst17|Mux0                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |NEANDER|PC:inst21|reg[3]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |NEANDER|RDMreg:inst24|reg[5]             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |NEANDER|Display:inst1|disp2[3]           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |NEANDER|Controller:inst2|reg_fstate.AND1 ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |NEANDER|UAL:inst17|Mux1                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +-------------------------------+
@@ -337,7 +340,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jun 18 09:57:21 2019
+    Info: Processing started: Fri Jun 21 13:12:01 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off NEANDER -c NEANDER
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file neander.bdf
@@ -390,33 +393,37 @@ Info (12021): Found 2 design units, including 1 entities, in source file compone
 Info (12021): Found 2 design units, including 1 entities, in source file components/ac/ac.vhd
     Info (12022): Found design unit 1: AC-ffd
     Info (12023): Found entity 1: AC
+Info (12021): Found 2 design units, including 1 entities, in source file components/display/sum8b.vhd
+    Info (12022): Found design unit 1: sum8b-soma
+    Info (12023): Found entity 1: sum8b
 Info (12127): Elaborating entity "NEANDER" for the top level hierarchy
 Info (12128): Elaborating entity "Controller" for hierarchy "Controller:inst2"
 Info (12128): Elaborating entity "decoder" for hierarchy "decoder:inst5"
 Info (12128): Elaborating entity "RI" for hierarchy "RI:inst18"
 Info (12128): Elaborating entity "RDMreg" for hierarchy "RDMreg:inst24"
 Info (12128): Elaborating entity "MuxRDM" for hierarchy "MuxRDM:inst22"
-Info (12128): Elaborating entity "memRAM" for hierarchy "memRAM:inst4"
-Info (12128): Elaborating entity "decoder_2_4" for hierarchy "memRAM:inst4|decoder_2_4:decodX"
-Info (12128): Elaborating entity "memCell" for hierarchy "memRAM:inst4|memCell:\genx:0:geny:0:gen"
+Info (12128): Elaborating entity "memRAM" for hierarchy "memRAM:inst6"
+Info (12128): Elaborating entity "decoder_2_4" for hierarchy "memRAM:inst6|decoder_2_4:decodX"
+Info (12128): Elaborating entity "memCell" for hierarchy "memRAM:inst6|memCell:\genx:0:geny:0:gen"
 Info (12128): Elaborating entity "REMreg" for hierarchy "REMreg:inst25"
 Info (12128): Elaborating entity "MuxRem" for hierarchy "MuxRem:inst20"
 Info (12128): Elaborating entity "PC" for hierarchy "PC:inst21"
 Info (12128): Elaborating entity "AC" for hierarchy "AC:inst"
 Info (12128): Elaborating entity "UAL" for hierarchy "UAL:inst17"
 Info (12128): Elaborating entity "NZ" for hierarchy "NZ:inst15"
-Info (12128): Elaborating entity "Display" for hierarchy "Display:inst7"
-Info (12128): Elaborating entity "display1" for hierarchy "Display:inst7|display1:dsp1"
+Info (12128): Elaborating entity "Display" for hierarchy "Display:inst1"
+Info (12128): Elaborating entity "sum8b" for hierarchy "Display:inst1|sum8b:inD"
+Info (12128): Elaborating entity "display1" for hierarchy "Display:inst1|display1:dsp1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 575 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 596 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 79 output pins
-    Info (21061): Implemented 483 logic cells
+    Info (21059): Implemented 83 output pins
+    Info (21061): Implemented 500 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4657 megabytes
-    Info: Processing ended: Tue Jun 18 09:57:25 2019
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4673 megabytes
+    Info: Processing ended: Fri Jun 21 13:12:07 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -1,5 +1,5 @@
 Assembler report for NEANDER
-Tue Jun 18 09:57:38 2019
+Fri Jun 21 13:12:27 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jun 18 09:57:38 2019 ;
+; Assembler Status      ; Successful - Fri Jun 21 13:12:27 2019 ;
 ; Revision Name         ; NEANDER                               ;
 ; Top-level Entity Name ; NEANDER                               ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                             ;
 +----------------+---------------------------------------------------------------------+
 ; Device         ; EP2C35F672C6                                                        ;
-; JTAG usercode  ; 0x0034259F                                                          ;
-; Checksum       ; 0x0034259F                                                          ;
+; JTAG usercode  ; 0x0034453E                                                          ;
+; Checksum       ; 0x0034453E                                                          ;
 +----------------+---------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+-----------------------------------------------------------------+
 ; Device             ; EPCS16                                                          ;
 ; JTAG usercode      ; 0x00000000                                                      ;
-; Checksum           ; 0x1C6C5055                                                      ;
+; Checksum           ; 0x1C6C662A                                                      ;
 ; Compression Ratio  ; 3                                                               ;
 +--------------------+-----------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jun 18 09:57:36 2019
+    Info: Processing started: Fri Jun 21 13:12:24 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off NEANDER -c NEANDER
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4582 megabytes
-    Info: Processing ended: Tue Jun 18 09:57:38 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4574 megabytes
+    Info: Processing ended: Fri Jun 21 13:12:27 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
