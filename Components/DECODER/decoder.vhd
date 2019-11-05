@@ -13,7 +13,7 @@ architecture behaviour of decoder is
 begin
 	with entrada select
 		decoded <= x"0" when x"00",
-					  x"1" when x"10",
+			   x"1" when x"10",
 		           x"2" when x"20",
 		           x"3" when x"30",
 		           x"4" when x"40",
